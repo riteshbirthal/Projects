@@ -1,0 +1,153 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(-135deg, #1a1a1a, #0f0f0f); /* changed to darker colors */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align items to the left */
+  width: 100%; /* ensure the header container spans the full width */
+  max-width: 1200px; /* limit the maximum width */
+  padding: 0 20px; /* add some padding */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-container h1 {
+  font-size: 4em; /* increased font size for Home */
+  margin: 0;
+}
+
+.text-container h2 {
+  font-size: 2.5em; /* increased font size for Ara Ara */
+  margin: 10px 0 0;
+  color: #cccccc;
+}
+
+.container {
+  display: flex;
+  gap: 30px; /* increased space between containers */
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.glass-container {
+  flex: 1; /* make containers flex */
+  min-width: 200px; /* set minimum width for responsiveness */
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), /* existing shadow */
+              0 10px 10px rgba(0, 0, 0, 0.2); /* new bottom shadow */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 3px solid rgba(255, 255, 255, 0.3); /* increased border width */
+  color: white;
+  text-align: center;
+  aspect-ratio: 1 / 1; /* maintain 3:4 aspect ratio */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* transition effect */
+}
+
+.glass-container:hover {
+  background: linear-gradient(135deg, #3a3a3a, #2a2a2a); /* dark gradient background on hover */
+  box-shadow: 0 0 15px rgba(58, 58, 58, 0.5);
+}
+
+.glow {
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.6); /* glowing effect */
+}
+
+.glass-container h1 {
+  font-size: 2em; /* increased font size for content */
+  margin: 10px 0;
+}
+
+.glass-container .icon {
+  font-size: 5em; /* adjust size as needed */
+  margin-bottom: 20px;
+}
+
+.glass-container button {
+  margin-top: 20px;
+  padding: 20px 40px; /* increased padding */
+  font-size: 1.5em; /* increased font size */
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1); /* transparent background */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-container button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-container button:hover::before {
+  left: 100%;
+}
+
+.glass-container button:active {
+  transform: scale(0.95);
+}
+
+.glass-container button .icon {
+  margin-right: 10px;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.loading-indicator {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #cccccc;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* push the icon to the far right */
+}
+
+.icon-container img, .icon-container svg {
+  width: 20em; /* set SVG size */
+  height: 20em; /* set SVG size */
+}
+
+#status {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #cccccc;
+}
