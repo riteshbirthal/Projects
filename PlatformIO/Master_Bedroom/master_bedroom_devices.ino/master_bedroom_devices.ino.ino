@@ -11,8 +11,8 @@ int fan_add = 1;
 byte light;
 byte fan;
 
-const char* ssid     = "Ara Ara";
-const char* password = "sayonara";
+const char* ssid     = "WiFi Name";
+const char* password = "WiFi Password";
 ESP8266WebServer server(80);
 
 int pinTube = 14;
