@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+
+{% block title %} 
+  <title>FastAPI application</title>
+{% endblock %} 
+
+{% block content %}
+  <div class="container align-items-center">
+    <h1 class="display-4">Create User</h1>
+    <div class="text-danger font-weight-bold">
+        {% for error in errors %}
+          <li>{{error}}</li>
+        {% endfor %}
+    </div>
+    {% if form=="update" %}
+    <form method="POST">
+      <label for="id">ID: </label><br>
+      <input type="number" id="id" name="id" value={{ user.id }}><br>
+      <label for="name">Name: </label><br>
+      <input type="text" id="name" name="name" value={{ user.name }}><br>
+      <label for="age">Age: </label><br>
+      <input type="number" id="age" name="age" value={{ user.age }}><br>
+      <button type="submit" class="btn btn-primary">Update User</button>
+    </form>
+    {% elif invalid %}
+      <form method="POST">
+        <label for="id">ID: </label><br>
+        <input type="number" id="id" name="id" value={{ user.id }}><br>
+        <label for="name">Name: </label><br>
+        <input type="text" id="name" name="name" value={{ user.name }}><br>
+        <label for="age">Age: </label><br>
+        <input type="number" id="age" name="age" value={{ user.age }}><br>
+        <button type="submit" class="btn btn-primary">Create User</button>
+      </form>
+    {% else %}
+      <form method="POST">
+        <label for="id">ID: </label><br>
+        <input type="number" id="id" name="id"><br>
+        <label for="name">Name: </label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="age">Age: </label><br>
+        <input type="number" id="age" name="age"><br>
+        <button type="submit" class="btn btn-primary">Create User</button>
+      </form>
+    {% endif %}
+  </div>
+{% endblock %}

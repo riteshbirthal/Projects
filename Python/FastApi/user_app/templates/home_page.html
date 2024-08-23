@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block title %} 
+  <title>FastAPI application</title>
+{% endblock %} 
+
+{% block content %} 
+  <div class="container align-items-center">
+    <h1 class="display-4">Users</h1>
+    <div class="d-flex flex-row">
+      <h2 class="p-2" style="width:25%">ID</h2>
+      <h2 class="p-2" style="width:25%">Name</h2>
+      <h2 class="p-2" style="width:25%">Age</h2>
+    </div>
+    {% for user in users %}
+      <div class="d-flex flex-row">
+        <div class="p-2" style="width:25%">{{ user.id }}</div>
+        <div class="p-2" style="width:25%">{{ user.name }}</div>
+        <div class="p-2" style="width:25%">{{ user.age }}</div>
+        <div class="p-2" style="width:25%"><a href="/users/{{user.id}}"><button style="width:50%">User Page</button></a></div>
+      </div>
+    {% endfor %}
+    <a href="/create_user"><button class="my-4" style="width:30%">Create User</button></a>
+  </div>
+{% endblock %} 

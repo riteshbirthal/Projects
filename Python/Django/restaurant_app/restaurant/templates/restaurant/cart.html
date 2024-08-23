@@ -1,0 +1,30 @@
+{% extends 'restaurant/base.html' %}
+{% block content %}
+    <section class='section-intro'>
+        {% for item in items %}
+            <div id='food_items'>
+                <div>
+                    <img class="article-img" width="150rem" height="150rem" src="{{ item.food_image_url }}">
+                </div>
+                <div>
+                    <h2>{{ item.food_name }}</h2>
+                    <h3>Price: {{item.food_price}}</h3>
+                    <h3>Quantity: {{ item.quantity }}</h4>
+                    <h3>Total: {{item.total}}</h3>
+                    <form class="media-centered" method='POST'>
+                        {% csrf_token %}
+                        <input type="hidden" name="food_name" value="{{ item.food_name }}">
+                        <input type="submit" value="Remove from Cart">
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+        {% if payment %}
+            <form class="media-centered" method='POST'>
+                {% csrf_token %}
+                <input type="hidden" name="place_order" value="{{ True }}">
+                <input type="submit" value="Place Order">
+            </form>
+        {% endif %}
+    </section>
+{% endblock content %}

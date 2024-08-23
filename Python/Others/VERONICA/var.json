@@ -1,0 +1,19 @@
+{
+  "today": {
+    "date": "2022-02-25",
+    "welcome": 0,
+    "battery_mail": 1,
+    "b_wish": 1
+  },
+  "tomorrow": {
+    "date": "2022-02-26",
+    "welcome": 1,
+    "battery_mail": 1,
+    "b_wish": 1
+  },
+  "Light": {
+    "light1": 1,
+    "light2": 0,
+    "off": 0
+  }
+}

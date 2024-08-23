@@ -1,0 +1,27 @@
+{% extends 'restaurant/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="section-intro" style="padding: 5.5em 0em;">
+    <div class="content-section container" style="background-color: rgba(255, 255, 255, 0.5); padding:5em;">
+        <div class="media">
+            <img class="rounded-circle account-img" width="70rem" height="70rem" src="{{ user.profile.image.url }}">
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+                <p class="text-secondary">{{ user.phone }}</p>
+            </div>
+        </div>
+        <form method='POST' enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class='form-group'>
+                <legend class='border-bottom mb-4'>Profile Info</legend>
+                {{ u_form|crispy }}
+                {{ p_form|crispy }}
+            </fieldset>
+            <div class='form-group'>
+                <button class='btn btn-outline-info' type='submit'>Update</bottom>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock content %}

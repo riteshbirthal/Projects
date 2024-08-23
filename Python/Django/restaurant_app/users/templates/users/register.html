@@ -1,0 +1,23 @@
+{% extends 'restaurant/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="section-intro">
+    <div class='content-section container' style="background:rgb(255,255,255,0.5); padding:2rem 4rem;">
+        <form method='POST'>
+            {% csrf_token %}
+            <fieldset class='form-group'>
+                <legend class='border-bottom mb-4'>Join Today</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class='form-group'>
+                <button class='btn btn-outline-info' type='submit'>Sign Up</bottom>
+            </div>
+        </form>
+        <div class='border-top pt-3'>
+            <small class='text-muted'>
+                Already Have an Account? <a class='ml-2' href='#'>Sign In</a>
+            </small>
+        </div>
+    </div>
+</section>
+{% endblock content %}

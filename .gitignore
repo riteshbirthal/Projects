@@ -1,5 +1,6 @@
 Python/*/*/__pycache__
 ReactJS/*/node_modules
+Angular/*/node_modules
 
 
 

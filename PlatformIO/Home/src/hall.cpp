@@ -31,14 +31,14 @@
 char ssid[] = "WiFi Name";
 char pass[] = "WiFi Password";
 
-int pinGate = 5;
+int pinGate = 14;
 
 BLYNK_WRITE(V2){
     if(param.asInt()==1){
         Serial.println("Gate Opened");
-        digitalWrite(pinGate, HIGH);
-        delay(500);
         digitalWrite(pinGate, LOW);
+        delay(500);
+        digitalWrite(pinGate, HIGH);
     }else{
         Serial.println("Gate Closed");
     }

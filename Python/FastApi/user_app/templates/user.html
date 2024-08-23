@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block title %} 
+  <title>FastAPI application</title>
+{% endblock %} 
+
+{% block content %} 
+  <div class="container align-items-center">
+    <h1 class="display-4">User Details</h1>
+    <div class="d-flex flex-row">
+      <h2 class="p-2" style="width:20%">ID</h2>
+      <h2 class="p-2" style="width:20%">Name</h2>
+      <h2 class="p-2" style="width:20%">Age</h2>
+    </div>
+    {% if flag %}
+      <div class="d-flex flex-row">
+        <div class="p-2" style="width:20%">{{ user.id }}</div>
+        <div class="p-2" style="width:20%">{{ user.name }}</div>
+        <div class="p-2" style="width:20%">{{ user.age }}</div>
+        <div class="p-2" style="width:20%"><a href="/update-user/{{ user.id }}"><button style="width:50%">Edit</button></a></div>
+        <div class="p-2" style="width:20%"><a href="/delete-user/{{user.id}}"><button style="width:50%">Delete</button></a></div>
+      </div>
+    {% endif %}
+    <a href="/"> <button class="my-4" style="width:30%">Home</button> </a>
+  </div>
+{% endblock %}

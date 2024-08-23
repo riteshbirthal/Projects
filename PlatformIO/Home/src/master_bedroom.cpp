@@ -30,26 +30,26 @@
 char ssid[] = "WiFi Name";
 char pass[] = "WiFi Password";
 
-int pinLight = 14;
+int pinLight = 4;
 int pinFan = 5;
 
 BLYNK_WRITE(V0){
     if(param.asInt()==1){
         Serial.println("Fan ON");
-        digitalWrite(pinFan, HIGH);
+        digitalWrite(pinFan, LOW);
     }else{
         Serial.println("Fan OFF");
-        digitalWrite(pinFan, LOW);
+        digitalWrite(pinFan, HIGH);
     }
 }
 
 BLYNK_WRITE(V1){
     if(param.asInt()==1){
         Serial.println("Light ON");
-        digitalWrite(pinLight, HIGH);
+        digitalWrite(pinLight, LOW);
     }else{
         Serial.println("Light OFF");
-        digitalWrite(pinLight, LOW);
+        digitalWrite(pinLight, HIGH);
     }
 }
 
