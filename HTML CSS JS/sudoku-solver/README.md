@@ -1,1 +1,8 @@
-# sudoku-solver-2.0
+# Sudoku Solver
+
+Instructions to run the app:
+
+```
+    npm i
+    npm start
+```
