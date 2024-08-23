@@ -1,0 +1,84 @@
+*{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem 1rem;
+}
+
+#instructions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0rem 1rem;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0rem 1rem;
+}
+
+#puzzle{
+    width: 27rem;
+    height: 27rem;
+}
+
+#puzzle input{
+    width: 3rem;
+    height: 3rem;
+    box-sizing: border-box;
+    border-spacing: 0;
+    border: 0.1rem grey solid;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.odd-section {
+    background-color: lightgrey;
+}
+
+#solve-button{
+    align-items: center;
+    margin: 0.5rem;
+    padding: 0.5rem 2rem;
+    border: 0.15rem grey solid;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#reset-button{
+    align-items: center;
+    margin: 0.5rem;
+    padding: 0.5rem 2rem;
+    border: 0.15rem grey solid;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

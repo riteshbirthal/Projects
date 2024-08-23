@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sudoku Solver</title>
+</head>
+
+<body>
+    <h1 id="heading">Welcome to Sudoku Solver Website</h1>
+    <div id="instructions">
+        <h2>Instructions</h2>
+        <li>All inputs should be from 1 to 9. No other characters are allowed.</li>
+        <li>Do not repeat a number in any row, column or 3x3 box.</li>
+    </div>
+    <section>
+        <div id="container">
+            <div id="puzzle"></div>
+            <div>
+            <button id="solve-button">Solve</button>
+            <button id="reset-button">Reset</button>
+            </div>
+            <p id="solution"></p>
+        </div>
+    </section>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
